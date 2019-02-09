@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+		<meta name="Sedoc" content="Controle de documentos">
+		<meta name="Thiago" content="Thiago da Silva Alves">
+		<title>SEDOC - CADASTRO</title>
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">SEDOC - Ministério do Esporte</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Cadastro
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="tabela.php">Tabela</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="admin.html">Administração</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sobre.html">Sobre</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+    <div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="mt-5">Cadastro de entrada de documento!</h1>
+				<p class="lead">Complete o formulário com os dados pedidos.</p>
+					<form method="POST" action="processa.php">
+						<div class="form-group col-sm-8">
+							<label for="nome">Tipo:</label>
+							<input type="text"
+									style="text-transform:uppercase"
+									name="tipo"
+									class="form-control"
+									id="tipo"
+									maxlength="50"
+									placeholder="EX: Em mãos, Sedex, Carta..."
+									required>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="telefone">Recebedor:</label>
+							<input type="text" 
+									style="text-transform:uppercase"
+									name="recebedor"
+									class="form-control"
+									id="recebedor"
+									maxlength="30"
+									placeholder="EX: Nome de quem está recebendo o documento(s)!"
+									required>
+						</div>
+						<div class="form-group col-sm-3">
+							<label for="data">Data:</label>
+							<input type="date"
+									name="data"
+									class="form-control"
+									id="data"
+									required>
+						</div>
+						<div class="form-group col-sm-3">
+							<label for="hora">Hora:</label>
+							<input type="time"
+									name="hora"
+									class="form-control"
+									id="hora"
+									required>
+						</div>
+						<div class="form-group col-sm-8">
+							<label for="nome">Especificação:</label>
+							<input type="text"
+									style="text-transform:uppercase"
+									name="especificacao"
+									class="form-control"
+									id="especificacao"
+									maxlength="50"
+									placeholder="EX: N° Ofício, Nome da entidade..."
+									required>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="telefone">Responsável:</label>
+							<input type="text"
+									style="text-transform:uppercase"
+									name="responsavel"
+									class="form-control"
+									id="responsavel"
+									maxlength="50"
+									placeholder="EX: Nome de quem irá receber o documento!"
+									required>
+						</div><br>
+						<button type="submit"
+								class="btn btn-success"
+								value="Salvar">Salvar</button>
+						<button type="reset"
+								class="btn btn-info"
+								value="Limpar">Limpar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
